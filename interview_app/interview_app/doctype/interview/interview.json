@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 20:52:20.641655",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "interview_info_section",
+  "interviewerid",
+  "candidateid",
+  "round",
+  "feedback",
+  "date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "interview_info_section",
+   "fieldtype": "Section Break",
+   "label": "Interview Info"
+  },
+  {
+   "fieldname": "interviewerid",
+   "fieldtype": "Link",
+   "label": "InterviewerID",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidateid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CandidateID",
+   "options": "Candidate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "round",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Round",
+   "options": "Screening\nTechnical\nAptitude\nHR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-21 22:13:48.909156",
+ "modified_by": "Administrator",
+ "module": "Interview App",
+ "name": "Interview",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

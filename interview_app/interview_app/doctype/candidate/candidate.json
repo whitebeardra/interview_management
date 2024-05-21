@@ -1,29 +1,22 @@
 {
  "actions": [],
- "autoname": "autoincrement",
  "creation": "2024-05-20 18:02:33.986912",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "candidate_info_section",
-  "candidateid",
-  "name1",
+  "candidate_name",
   "resume",
   "status"
  ],
  "fields": [
   {
-   "default": "candidate name",
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Name",
-   "reqd": 1
-  },
-  {
    "fieldname": "resume",
    "fieldtype": "Attach",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Resume"
   },
   {
@@ -35,25 +28,29 @@
    "default": "Pending",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Pending\nScreening Round\nTechnical Round\nAptitude Round\nAccepted\nRejected",
    "reqd": 1
   },
   {
-   "fieldname": "candidateid",
-   "fieldtype": "Autocomplete",
-   "label": "CandidateID",
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Candidate Name",
    "reqd": 1,
-   "search_index": 1
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-20 20:13:38.324983",
+ "modified": "2024-05-21 20:40:34.439389",
  "modified_by": "Administrator",
  "module": "Interview App",
  "name": "Candidate",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

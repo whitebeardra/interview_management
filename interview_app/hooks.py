@@ -4,6 +4,14 @@ app_publisher = "Beehyv"
 app_description = "Interview management system"
 app_email = "interview.site@beehyv.com"
 app_license = "mit"
+
+
+doc_events = {
+    'Candidate': {
+        'before_insert': 'interview_app.interview_app.doctype.candidate.candidate.before_insert'
+    }
+}
+
 # required_apps = []
 
 # Includes in <head>
